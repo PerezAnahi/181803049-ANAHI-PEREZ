@@ -1,0 +1,45 @@
+<%-- 
+    Document   : index
+    Created on : 26 may 2020, 17:13:25
+    Author     : Anahi
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Edad</title>
+    </head>
+    <body>
+
+                <%
+        if (request.getParameter("ok")!= null){
+            int numero;
+                numero =Integer.parseInt(request.getParameter("numero"));
+                
+               if(numero>=18){
+                   out.print("si eres legal");
+               }
+               
+             }else{
+            out.print("Eres menor de edad");
+        }
+                %>
+            <center><h1>¿Eres mayor de edad?</h1>
+        <form action="index.jsp" method="POST">
+            <table border=0>
+            <td>Ingrese un numero</td>
+            <td><input type="number" name="numero"></td>
+            <tr>
+                <td> <input type ="submit" value="calcular" name="ok"/></td>
+            </tr>
+
+            </table>
+        </form>
+    </center>
+    
+        
+        
+    </body>
+</html>
