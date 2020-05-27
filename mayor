@@ -1,0 +1,37 @@
+<%-- 
+    Document   : index
+    Created on : 26 may 2020, 15:13:21
+    Author     : Anahi
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Mayor de dos numeros</title>
+    </head>
+    <body>
+        <h1>El numero mayor de dos numeros</h1>
+        <h2>By: Anahi</h2>
+    
+        <form action="index.jsp" method="POST">
+            <h3>Ingresa dos </h3>
+            <input type="number" name="n1"/>
+            <input type="number" name="n2"/>
+            <input type="submit" name="send"/>
+            
+        
+        <p> <%
+            int n1 = Integer.parseInt(request.getParameter("n1"));
+            int n2 = Integer.parseInt(request.getParameter("n2"));
+            if (n1 > n2) {
+                out.print(n1);
+            } else {
+                out.print(n2);
+            }
+
+            %></p>
+    
+            </body>
+            </html>
